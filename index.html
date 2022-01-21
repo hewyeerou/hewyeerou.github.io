@@ -14,14 +14,18 @@
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <title>Yee Rou's</title>
+    <link rel="icon" href="assets/img/yeerou__logo__big.png" type="image/x-icon">
+
+    <title>yeerou's</title>
 </head>
 
 <body>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#home" class="nav__logo">Yee Rou</a>
+            <a href="#home">
+                <img src="assets/img/yeerou__logo.png" alt="" class="home__logo">
+            </a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__item">
@@ -99,8 +103,8 @@
                         <h1 class="home__title">Hi, I am <br>Yee Rou</h1>
                         <h3 class="home__subtitle">NUS Undergraduate</h3>
                         <p class="home__description">
-                            A penultimate undergraduate pursuing a degree in B.Comp (Information Systems) 
-                            at National University of Singapore. 
+                            A penultimate undergraduate pursuing a degree in B.Comp (Information Systems)
+                            at National University of Singapore.
                         </p>
                         <a href="#contact" class="button button--flex">
                             Contact Me <i class="uil uil-message button__icon"></i>
@@ -124,12 +128,15 @@
             <span class="section__subtitle">Introduction</span>
 
             <div class="about__container container grid">
-                <img src="assets/img/IMG_6493.jpg" alt="" class="about__img">
+
+                <div class="coding__container">
+                    <p>Coding is <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+                </div>
 
                 <div class="about__data">
                     <p class="about__description">
-                        Prior to university, I hold a Diploma with Merit in Financial Informatics 
-                        from Nanyang Polytechnic. I had prior internship experience in SAS Institute Pte Ltd, 
+                        Prior to university, I hold a Diploma with Merit in Financial Informatics
+                        from Nanyang Polytechnic. I had prior internship experience in SAS Institute Pte Ltd,
                         specialising in business intelligence and statistical analysis.
                     </p>
 
@@ -139,7 +146,7 @@
                         </h2>
                         <p class="about__work-place">Trainee Intern at SAS Institute Pte Ltd | 2018</p>
                         <span class="about__work-description">
-                            Provided technical support to Customer Success Team and clients. 
+                            Provided technical support to Customer Success Team and clients.
                             Also participated in a corporate project using SAS Text Analytics tool.
                         </span>
                     </div>
@@ -319,7 +326,8 @@
                     </div>
 
                     <span class="button button--flex button--small button--link">
-                        <a href="https://uvents.nus.edu.sg/event/18th-steps/module/IS3106/project/10" class="nav__link active-link">
+                        <a href="https://uvents.nus.edu.sg/event/18th-steps/module/IS3106/project/10"
+                            class="nav__link active-link">
                             View More
                         </a>
                         <i class="uil uil-arrow-right button__icon"></i>
@@ -344,26 +352,24 @@
                         <div class="projects__modal-content">
                             <h4 class="projects__modal-title">About the Project</h4>
                             <i class="uil uil-times projects__modal-close"></i>
+                            <p class="projects__modal-desc">
+                                This prototype targets merchandiser and promoter of Blacktop.
+                            </p>
 
                             <ul class="projects__modal-projects grid">
                                 <li class="projects__modal-project">
                                     <i class="uil uil-check-circle projects__modal-icon"></i>
-                                    <p> I develop the user interface</p>
+                                    <p> Outlets management</p>
                                 </li>
 
                                 <li class="projects__modal-project">
                                     <i class="uil uil-check-circle projects__modal-icon"></i>
-                                    <p> I develop the user interface</p>
+                                    <p> Products management</p>
                                 </li>
 
                                 <li class="projects__modal-project">
                                     <i class="uil uil-check-circle projects__modal-icon"></i>
-                                    <p> Web page development </p>
-                                </li>
-
-                                <li class="projects__modal-project">
-                                    <i class="uil uil-check-circle projects__modal-icon"></i>
-                                    <p> I develop the user interface</p>
+                                    <p> Users management</p>
                                 </li>
                             </ul>
                         </div>
@@ -380,7 +386,8 @@
                     </div>
 
                     <span class="button button--flex button--small button--link">
-                        <a href="https://uvents.nus.edu.sg/event/19th-steps/module/IS4103/project/9" class="nav__link active-link">
+                        <a href="https://uvents.nus.edu.sg/event/19th-steps/module/IS4103/project/9"
+                            class="nav__link active-link">
                             View More
                         </a>
                         <i class="uil uil-arrow-right button__icon"></i>
@@ -390,20 +397,15 @@
         </section>
 
         <!--==================== CONTACT ME ====================-->
-        <section class="contact section" id="contact">
-            <h2 class="section__title">Contact Me</h2>
-            <span class="section__subtitle">Hit me up</span>
+        <section class="contact" id="contact">
+            <div class="divider__container">
+                <img src="assets/img/pastel-divider.gif" alt="" class="divider__img">
+            </div>
+            <!-- <h2 class="section__title">Contact Me</h2> -->
+            <span class="section__subtitle">Hit me up at <b>yeerouhew@gmail.com</b></span>
 
-            <div class="contact__container container grid">
+            <!-- <div class="contact__container container grid">
                 <div>
-                    <!-- <div class="contact__information">
-                        <i class="uil uil-phone contact__icon"></i>
-                        <div>
-                            <h3 class="contact__title">Call Me</h3>
-                            <span class="contact__subtitle">88822222</span>
-                        </div>
-                    </div> -->
-
                     <div class="contact__information">
                         <i class="uil uil-envelope contact__icon"></i>
                         <div>
@@ -411,61 +413,10 @@
                             <span class="contact__subtitle">yeerouhew@gmail.com</span>
                         </div>
                     </div>
-
-                    <div class="contact__information">
-                        <i class="uil uil-envelope contact__icon"></i>
-                        <div>
-                            <h3 class="contact__title">Alternative Email</h3>
-                            <span class="contact__subtitle">e0417583@u.nus.edu</span>
-                        </div>
-                    </div>
                 </div>
-
-                
-            </div>
+            </div> -->
         </section>
     </main>
-
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-        <div class="footer__bg">
-            <div class="footer__container container grid">
-                <div>
-                    <h1 class="footer__title">Yee Rou</h1>
-                    <span class="footer__subtitle">Undergraduate</span>
-                </div>
-
-                <ul class="footer__links">
-                    <li>
-                        <a href="#skills" class="footer__link">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#projects" class="footer__link">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="footer__link">Contact</a>
-                    </li>
-                </ul>
-
-                <div class="footer__socials">
-                    <a href="https://www.linkedin.com/in/hew-yee-rou-b87a79153/" class="footer__social">
-                        <i class="uil uil-linkedin"></i>
-                    </a>
-
-                    <a href="https://github.com/hewyeerou" class="footer__social">
-                        <i class="uil uil-github"></i>
-                    </a>
-                </div>
-            </div>
-
-            <p class="footer__copy">&#169; All right reserved</p>
-        </div>
-    </footer>
-
-    <!--==================== SCROLL TOP ====================-->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="uil uil-arrow-up scrollup__icon"></i>
-    </a>
 
     <!--==================== SWIPER JS ====================-->
     <script src=""></script>

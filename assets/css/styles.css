@@ -4,11 +4,11 @@
 
 /*==================== VARIABLES CSS ====================*/
 :root {
-    --header-height: 3rem;
+    --header-height: 4rem;
 
     /*========== Colors ==========*/
     /* Change favorite color */
-    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --hue-color: 351; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -161,14 +161,9 @@ img{
     align-items: center;
 }
 
-.nav__logo,
 .nav__toggle{
     color: var(--title-color);
     font-weight: var(--font-medium);
-}
-
-.nav__logo:hover{
-    color: var(--first-color);
 }
 
 .nav__toggle{
@@ -178,6 +173,12 @@ img{
 
 .nav__toggle:hover{
     color: var(--first-color);
+}
+
+.home__logo{
+    width: 40%;
+    height: 40%;
+    margin-top: 0.5rem;
 }
 
 @media screen and (max-width: 767px){
@@ -376,7 +377,6 @@ img{
 }
 
 .about__description{
-    text-align: center;
     margin-bottom: var(--mb-2-5);
 }
 
@@ -421,6 +421,52 @@ img{
 .about__buttons{
     display:flex;
     justify-content: center;
+}
+
+/*==================== ABOUT ME CODING ====================*/
+.coding__container {
+    background-color: black;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coding__container p {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #eee;
+    font-size: 2rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.coding__container p span.typed-text {
+    font-weight: normal;
+    color: var(--first-color-lighter);
+}
+
+.coding__container p span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+}
+
+.coding__container p span.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
 }
 
 /*==================== SKILLS ====================*/
@@ -488,7 +534,6 @@ img{
 .skills__open .skills__arrow{
     transform: rotate(-180deg);
 }
-
 
 /*==================== PROJECTS ====================*/
 .projects__container{
@@ -572,7 +617,13 @@ img{
 .projects__modal-title{
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-25);
+}
+
+.projects__modal-desc{
+    font-size: var(--small-font-size);
     margin-bottom: var(--mb-1-5);
+    color: var(--text-color-light);
 }
 
 .projects__modal-close{
@@ -589,7 +640,16 @@ img{
     margin-right: var(--mb-0-25);
 }
 
+/*==================== DIVIDER ====================*/
+.divider__container{
+    height: 5%;
+}
 
+.divider__img{
+    width: 100%;
+    height: 10px;
+    object-fit: cover;
+}
 
 
 /* Active Modal */
@@ -682,40 +742,9 @@ img{
 }
 
 
-
-/*========== SCROLL UP ==========*/
-.scrollup{
-    position: fixed;
-    right: 1rem;
-    bottom: -20%;
-    background-color: var(--first-color);
-    opacity: .8;
-    padding: 0 .3rem;
-    border-radius: .4rem;
-    z-index: var(--z-tooltip);
-    transition: .4s;
-}
-
-.scrollup:hover{
-    background-color: var(--first-color-alt);
-}
-
-.scrollup__icon{
-    font-size: 1.5rem;
-    color: #FFF;
-}
-
-/* Show scroll */
-.show-scroll{
-    bottom: 5rem;
-}
-
-/*========== SCROLL BAR ==========*/
-
-
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (max-width: 350px){
+@media screen and (min-width: 350px) and (max-width: 567px){
     .container{
         margin-left: var(--mb-1);
         margin-right: var(--mb-1);
@@ -739,6 +768,14 @@ img{
 
     .skills__title{
         font-size: var(--normal-font-size);
+    }
+
+    .about__work-title{
+        text-align: center;
+    }
+
+    .home__logo{
+        visibility: hidden;
     }
 }
 
@@ -765,6 +802,10 @@ img{
 
     .projects__container{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home__logo{
+        visibility: hidden;
     }
 }
 
@@ -885,6 +926,11 @@ img{
     .footer__copy{
         margin-top: 4.5rem;
     }
+
+    .home__logo{
+        visibility: visible;
+    }
+
 }
 
 /* For large devices */
@@ -905,5 +951,9 @@ img{
 
     .projects__container{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home__logo{
+        visibility: visible;
     }
 }
