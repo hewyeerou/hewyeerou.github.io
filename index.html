@@ -484,4 +484,14 @@
     <!--==================== MAIN JS ====================-->
     <script src="assets/js/main.js"></script>
   </body>
+
+  <script>
+    const text = document.querySelector(".home__title");
+    text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+
+    const ele = document.querySelectorAll("span");
+    for (let i = 0; i < ele.length; i++) {
+      ele[i].style.animationDelay = i * 0.07 + "s";
+    }
+  </script>
 </html>
