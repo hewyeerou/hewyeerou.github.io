@@ -393,6 +393,11 @@ img {
   font-weight: var(--font-semi-bold);
 }
 
+.about__work-place-year {
+  font-weight: var(--font-semi-bold);
+  font-size: var(--small-font-size);
+}
+
 .about__work-description {
   font-size: var(--smaller-font-size);
 }
